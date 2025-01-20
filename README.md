@@ -36,12 +36,12 @@ const encryptedUserId = CryptoJS.AES.encrypt(userId, secretKey).toString();
 #### **Bước 2: Kết Nối Tới Socket Server**
 Kết nối tới server socket với URL được cung cấp:
 
-- **Server URL**: `wss://chatstore.hunonicpro.com`
+- **Server URL**: `wss://****`
 - **Cách kết nối**:
 ```javascript
 import { io } from "socket.io-client";
 
-const socket = io("wss://chatstore.hunonicpro.com", {
+const socket = io(serverUrl, {
   query: { userId: encryptedUserId }, // Gửi userId đã mã hóa trong query
 });
 ```
