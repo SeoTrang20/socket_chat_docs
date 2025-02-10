@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+      integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+      <h1 class="title">Hello World! </h1>
+      <p id="currentTime"></p>
+      <script>
+        const secretKey = "hunonic_socket"; // Khóa bí mật dùng để mã hóa
+        const encryptedUserId = CryptoJS.AES.encrypt(
+          '448144',
+          secretKey
+        ).toString();
+
+
+    document.getElementById('currentTime').textContent = encryptedUserId
+      </script>
+  </body>
+</html>
