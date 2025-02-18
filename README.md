@@ -84,6 +84,9 @@ socket.on("receive", (data) => {
 5. **Xóa phòng chat từ một phía**
    - **[DELETE]** `/api/v1/conversation/{conversationId}`
 
+5. **Xóa phòng chat bằng id**
+   - **[GET]** `/api/v1/get-by-id/{conversationId}`
+
 ---
 
 #### **Tin Nhắn (Messages)**
