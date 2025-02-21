@@ -41,9 +41,16 @@ Kết nối tới server socket với URL được cung cấp:
 ```javascript
 import { io } from "socket.io-client";
 
+// (đối với người dùng và đại lý)
 const socket = io(serverUrl, {
   query: { userId: encryptedUserId }, // Gửi userId đã mã hóa trong query
 });
+
+// (đối với hunonic sale)
+const socket = io(serverUrl, {
+  query: { userId: encryptedUserId, isSale: 1 }, // Gửi userId đã mã hóa trong query
+});
+
 ```
 
 ---
