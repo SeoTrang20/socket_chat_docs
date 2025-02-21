@@ -91,7 +91,7 @@ socket.on("receive", (data) => {
 
 #### **Tin Nhắn (Messages)**
 
-1. **Tạo tin nhắn mới**
+1. **Tạo tin nhắn mới (chat giữa các người dùng và đại lý)**
    - **[POST]** `/api/v1/message/`
    - **Body yêu cầu**:
    ```json
@@ -101,10 +101,20 @@ socket.on("receive", (data) => {
        "type": "text" // hoặc "image"
    }
    ```
+2. **Tạo tin nhắn mới (chat với hunonic)**
+   - **[POST]** `/api/v1/message/with-hunonic`
+   - **Body yêu cầu**:
+   ```json
+   {
+       "conversation_id": 1,
+       "message": ["Hello, world"],
+       "type": "text" // hoặc "image"
+   }
+   ```
 
-2. **Xóa tin nhắn**
+3. **Xóa tin nhắn**
    - **[DELETE]** `/api/v1/message/{messageId}`
 
-3. **Lấy tin nhắn trong phòng chat**
+4. **Lấy tin nhắn trong phòng chat**
    - **[GET]** `/api/v1/message/{conversationId}?page=1&limit=20`
 
