@@ -79,19 +79,22 @@ socket.on("receive", (data) => {
    }
    ```
 
-2. **Lấy tất cả các phòng chat của người dùng**
+2. **Lấy tất cả các phòng chat của người dùng** ***_(dành cho người dùng)_***
    - **[GET]** `/api/v1/conversation/get-all-by-user`
 
-3. **Lấy phòng chat giữa hai người dùng**
+3. **Lấy tất cả các phòng chat của người dùng** ***_(dành cho sale)_***
+   - **[GET]** `/api/v1/conversation/get-all-from-sale`
+
+4. **Lấy phòng chat giữa hai người dùng**
    - **[GET]** `/api/v1/conversation/get-one-on-one?userId={userId}`
 
-4. **Lấy danh sách người dùng trong một phòng chat**
+5. **Lấy danh sách người dùng trong một phòng chat**
    - **[GET]** `/api/v1/conversation/get-all-users/{conversationId}`
 
-5. **Xóa phòng chat từ một phía**
+6. **Xóa phòng chat từ một phía**
    - **[DELETE]** `/api/v1/conversation/{conversationId}`
 
-5. **Lấy phòng chat bằng id**
+7. **Lấy phòng chat bằng id**
    - **[GET]** `/api/v1/get-by-id/{conversationId}`
 
 ---
