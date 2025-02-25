@@ -82,7 +82,7 @@ socket.on("receive", (data) => {
 2. **Lấy tất cả các phòng chat của người dùng** ***_(dành cho người dùng)_***
    - **[GET]** `/api/v1/conversation/get-all-by-user`
 
-3. **Lấy tất cả các phòng chat của người dùng** ***_(dành cho sale)_***
+3. **Lấy tất cả các phòng chat của sale** ***_(dành cho sale)_***
    - **[GET]** `/api/v1/conversation/get-all-from-sale`
 
 4. **Lấy phòng chat giữa hai người dùng**
